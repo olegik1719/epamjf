@@ -1,0 +1,2 @@
+Изучите классы реализации коллекций и заполните следующую таблицу
+class|Ordering|Random Access| Key-Value Pairs| Allows Duplicates| Allows Null Values| Thread Safe|Blocking Operations
