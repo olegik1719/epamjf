@@ -10,9 +10,11 @@ public class Notepad implements Pad {
         return new Notepad();
     }
 
+
+
     @Override
     public Notepad addNote(String note) {
-        notepad.add(Note.create(note));
+        notepad.add(new Note(note));
         return this;
     }
 
@@ -29,10 +31,28 @@ public class Notepad implements Pad {
     }
 
     @Override
+    public Notepad addNote(int number, String text) {
+        notepad.add(number,new Note(text));
+        return this;
+    }
+
+    @Override
+    public Notepad clearNote(int number) {
+        notepad.get(number).clearNote();
+        return this;
+    }
+
+
+    @Override
     public String getNotes() {
         StringBuilder result = new StringBuilder("Available " + notepad.size() + " records:\n");
         for (int i = 0; i < notepad.size(); i++)
-            result.append("Record #" + (i+1) + ":\n"+notepad.get(i).getNote()  + "\n-------------\n");
+            result.append("Record #")
+                  .append(i+1)
+                  .append(":\n")
+                  .append(notepad.get(i).getNote())
+                  .append("\n-------------\n")
+            ;
         return result.toString();
     }
 }

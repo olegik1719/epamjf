@@ -13,7 +13,10 @@ public class NotepadTest {
                 .addNote("Note 02")
                 .addNote("Note 03")
                 .removeNote(2)
-                .editNote(1,"Last Note");
+                .editNote(1,"Last Note")
+                .addNote(1,"include")
+                .clearNote(1)
+            ;
         System.out.printf("%s%n", notepad.getNotes());
     }
 }
