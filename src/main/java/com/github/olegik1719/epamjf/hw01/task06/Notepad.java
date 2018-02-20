@@ -31,7 +31,7 @@ public class Notepad implements Pad {
     }
 
     @Override
-    public Notepad addNote(int number, String text) {
+    public Notepad insertNote(int number, String text) {
         notepad.add(number,new Note(text));
         return this;
     }
