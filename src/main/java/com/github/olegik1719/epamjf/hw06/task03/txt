@@ -1,3 +1,5 @@
+Задание 3. Ссылки на коллекции
+
 Определена иерархия классов
 class MedicalStaff{}
 class Doctor extends MedicalStaff{}
