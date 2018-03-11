@@ -19,7 +19,7 @@ public class Pen {
         result *= HASH_PRIME;
         result += str_hashcode(colour);
         result *= HASH_PRIME;
-        result += str_hashcode(colour);
+        result += str_hashcode(model);
         return result;
     }
 
